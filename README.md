@@ -91,20 +91,6 @@ This Terraform project deploys a basic infrastructure on Alibaba Cloud, includin
 | `vswitch_id` | ID of the VSwitch |
 | `security_group_id` | ID of the Security Group |
 
-## Customization
-
-You can customize the deployment by creating a `terraform.tfvars` file:
-
-```hcl
-region        = "eu-west-1"
-project_name  = "my-workshop"
-vpc_cidr      = "10.0.0.0/16"
-vswitch_cidr  = "10.0.1.0/24"
-instance_type = "ecs.g9i.large"
-```
-
-See `terraform.tfvars.example` for all available options.
-
 ## Clean Up
 
 To destroy all resources created by this project:
@@ -125,6 +111,20 @@ alicloud-terraform-workshop/
 └── README.md                  # This file
 ```
 
+## Workshop Tasks
+
+### Task 1: Basic Deployment
+Deploy the infrastructure as-is and verify Nginx is accessible.
+
+### Task 2: Customize the Instance
+Modify the ECS instance type or disk size in `variables.tf`.
+
+### Task 3: Add More Security Rules
+Add additional security group rules for HTTPS (port 443).
+
+### Task 4: Multiple Instances
+Modify the configuration to deploy multiple ECS instances.
+
 ## Troubleshooting
 
 ### Common Issues
@@ -134,20 +134,6 @@ alicloud-terraform-workshop/
 2. **Insufficient permissions**: Ensure your Alibaba Cloud credentials have permissions to create VPC, ECS, and Security Group resources.
 
 3. **Nginx not responding**: Wait a minute after deployment for the user-data script to complete installing and starting Nginx.
-
-## Workshop Tasks
-
-### Task 1: Basic Deployment
-Deploy the infrastructure as-is and verify Nginx is accessible.
-
-### Task 2: Customize the Instance
-Modify the ECS instance type or disk size in `terraform.tfvars`.
-
-### Task 3: Add More Security Rules
-Add additional security group rules for HTTPS (port 443).
-
-### Task 4: Multiple Instances
-Modify the configuration to deploy multiple ECS instances.
 
 ## Resources
 
