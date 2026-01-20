@@ -78,7 +78,7 @@ This Terraform project deploys a basic infrastructure on Alibaba Cloud, includin
    http://<ecs_public_ip>
    ```
    
-   You should see a welcome page confirming your deployment was successful!
+   Note: it can take several minutes to install Nginx. Once installed, you should see a welcome page confirming your deployment was successful!
 
 ## Outputs
 
